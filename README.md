@@ -12,3 +12,20 @@ idus test
 - 일반적으로 airflow 등의 스케쥴링 도구로 배치 장애시 복구를 진행할 것으로 생각하나, Spark Application으로 과제가 주어져 <br> spark-submit시
 `--conf "spark.task.maxFailures=4" --conf "spark.stage.maxConsecutiveAttempts=4"` 옵션을 주었습니다. <br>
 과제 조건이 의도한 바와 맞는지 불명확하여, 해당 설정이 기본값과 동일하지만, 명시하기 위해 넣어두었습니다.
+## 기타
+- Spark job은 아래와 같이 실행하였습니다
+ ```
+spark-submit ^
+  --class Main ^
+  --master local[8] ^
+  --executor-memory 16G ^
+  --driver-memory 16G ^
+  --conf "spark.executor.extraJavaOptions=-Dlog4j.logger.org.apache.spark=ERROR" ^
+  --conf "spark.driver.extraJavaOptions=-Dlog4j.logger.org.apache.spark=ERROR" ^
+  --conf "spark.task.maxFailures=4" ^
+  --conf "spark.stage.maxConsecutiveAttempts=4" ^
+  Idus-assembly-0.1.jar 2019-11-01
+```
+- sbt assembly 결과 jar는 용량 문제로 업로드하지 못했습니다.
+- 2019-Nov.csv는 루트 폴더(build.sbt 위치)에 존재하는 기준으로 작성했습니다.
+- 실제 실행한 access_key 및 file_path는 비식별화 하였습니다.
