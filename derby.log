@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Jul 04 00:34:01 KST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0190-793b-32a4-0001df16c058 
+on database directory C:\Idus\metastore_db with class loader sbt.internal.LayeredClassLoader@48a3b5f9 
+Loaded from file:/C:/Idus/target/bg-jobs/sbt_fc1f0b4c/target/2f61c72b/0b708d5e/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=15.0.1+9-18
+user.dir=C:\Idus
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
