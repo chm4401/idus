@@ -13,7 +13,8 @@ idus test
 `--conf "spark.task.maxFailures=4" --conf "spark.stage.maxConsecutiveAttempts=4"` 옵션을 주었습니다. <br>
 과제 조건이 의도한 바와 맞는지 불명확하여, 해당 설정이 기본값과 동일하지만, 명시하기 위해 넣어두었습니다.
 ## 기타
-- Spark job은 아래와 같이 실행하였습니다
+- 테스트는 Windows에서 spark-3.5.1-bin-hadoop3-scala2.13.tgz 를 설치하여 진행하였으며
+- sbt assembly로 생성된 jar를 이용해 아래와 같이 실행하였습니다.
  ```
 spark-submit ^
   --class Main ^
